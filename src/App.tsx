@@ -23,6 +23,8 @@ function App() {
 
   const dogCount = dogs.length;
 
+  console.log(cats);
+
   return (
     <>
       <Navbar />
@@ -35,7 +37,7 @@ function App() {
 							key={cat.id}
 							name={cat.name}
 							species={cat.species}
-							favFoods={[Object.values(cat.favFoods).join(", ")]}
+							favFoods={[cat.favFoods.join(", ")]}
 							birthYear={cat.birthYear}
 							catIndex={index}
 						  />
