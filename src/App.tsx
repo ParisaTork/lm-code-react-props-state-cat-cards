@@ -47,7 +47,7 @@ function App() {
 				species={dog.species}
 				favFoods={dog.favFoods}
 				birthYear={dog.birthYear}
-				catIndex={index}
+				dogIndex={index}
 				/>
 			))}			
         </div>
