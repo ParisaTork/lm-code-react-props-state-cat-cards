@@ -26,21 +26,22 @@ function App() {
   return (
     <>
       <Navbar />
-      <Header dogCount={dogCount}/>
+      <Header catCount={catCount}/>
 
       <main>
         <div className="cards__wrapper">
-			{/* {cats.map((cat, index) => (
+			{cats.map((cat, index) => (
 							<CatCard
 							key={cat.id}
 							name={cat.name}
 							species={cat.species}
-							favFoods={cat.favFoods}
+							favFoods={[Object.values(cat.favFoods).join(", ")]}
 							birthYear={cat.birthYear}
 							catIndex={index}
 						  />
-						))} */}
-			{dogs.map((dog, index) => (
+						))}
+
+			{/* {dogs.map((dog, index) => (
 				<DogCard
 				key={dog.id}
 				name={dog.name}
@@ -49,7 +50,7 @@ function App() {
 				birthYear={dog.birthYear}
 				dogIndex={index}
 				/>
-			))}			
+			))}			 */}
         </div>
       </main>
 
