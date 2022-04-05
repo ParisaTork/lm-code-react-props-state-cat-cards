@@ -7,6 +7,9 @@ import Cat from './data/cat';
 import CatCard from './components/cat_card'
 import { v4 as uuidv4 } from 'uuid';
 import catData from './data/cat-data';
+import Dog from './data/dog';
+import dogData from './data/dog-data';
+import DogCard from './components/dog_card';
 
 function App() {
 
@@ -16,14 +19,18 @@ function App() {
 
   const catCount = cats.length;
 
+  const [ dogs, setDogs ] = useState<Array<Dog>>(dogData);
+
+  const dogCount = dogs.length;
+
   return (
     <>
       <Navbar />
-      <Header catCount={catCount}/>
+      <Header dogCount={dogCount}/>
 
       <main>
         <div className="cards__wrapper">
-			{cats.map((cat, index) => (
+			{/* {cats.map((cat, index) => (
 							<CatCard
 							key={cat.id}
 							name={cat.name}
@@ -32,7 +39,17 @@ function App() {
 							birthYear={cat.birthYear}
 							catIndex={index}
 						  />
-						))}
+						))} */}
+			{dogs.map((dog, index) => (
+				<DogCard
+				key={dog.id}
+				name={dog.name}
+				species={dog.species}
+				favFoods={dog.favFoods}
+				birthYear={dog.birthYear}
+				catIndex={index}
+				/>
+			))}			
         </div>
       </main>
 
